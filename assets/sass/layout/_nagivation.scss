@@ -1,0 +1,95 @@
+/* Navigation
+========================================================================== */
+.navigation {
+  position: relative;
+}
+
+.navigation__logo {
+  position: absolute;
+  top: .9em;
+  left: 2.5em;
+}
+
+.logo-xda {
+  text-align: center;
+  font-family: $old-stanbard;
+  font-weight: $bold;
+  font-size: $x-large;
+  background-color: $smoky-black;
+  padding: 1.6875rem;
+  position: absolute;
+  left: -2.0625rem;
+  top: -1rem;
+}
+
+.collapsible {
+  text-align: right;
+  label {
+      display: block;
+      // padding-top: 0em;
+      padding-bottom: .5em;
+      padding-right: 1.5em;
+      font-size: 1.8rem;
+  }
+}
+
+#menu {
+  display: none;
+}
+
+input:checked~.navigation__container {
+  max-height: 100%;
+}
+
+.navigation__container {
+  max-height: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.navigation__list {
+  list-style-type: none;
+}
+
+.navigation__item {
+  a {
+      display: block;
+      text-align: left;
+      padding: 0.75em;
+      font-family: $raleway;
+      font-size: 1.2rem;
+      font-weight: $bold;
+      text-decoration: none;
+      color: $smoky-black;
+      &:hover {
+          color: $granite-gray;
+      }
+  }
+}
+
+// SOLO DESKTOP Y TABLET
+@include tablet-view {
+  .collapsible {
+      label {
+          display: none;
+      }
+  }
+  .navigation__container {
+      max-height: 100% ;
+      padding: .5em 3em .3em 3em;
+      overflow: visible;
+  }
+  .navigation__list {
+      display: flex;
+      justify-content: flex-end;
+      padding: inherit;
+      margin: inherit;
+  }
+  .navigation__item {
+      a {
+          padding: .5em 1em;
+          font-size: 1rem;
+          font-weight: $bold;
+      }
+  }
+}

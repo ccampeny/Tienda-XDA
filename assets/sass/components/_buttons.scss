@@ -1,0 +1,24 @@
+.button {
+    border: none;
+    color: $smoky-black;
+    padding: 12px 45px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 6px 2px;
+    transition-duration: 0.4s;
+    font-family: $raleway;
+    font-weight: $bold;
+
+    &__dark {
+      background-color: white;
+      color: black;
+      border: 1px solid $smoky-black;
+  
+      &:hover {
+          background-color: $smoky-black;
+          color: $white;
+      }
+    }
+  }

@@ -1,0 +1,160 @@
+.main {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto;
+    margin: 50px 0 0;
+  
+    .header {
+      background-image: url(../img/hero-img.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: left;
+      padding-bottom: 50rem;
+      height: 250px;
+      width: 100%;
+
+      @include mobile-view {
+        padding-bottom: 25rem;
+      }
+  
+      @include tablet-view {
+        padding-bottom: 40rem;
+      }
+  
+      @include laptop-view {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 3;
+        height: auto;
+      }
+    }
+  
+    .info {
+      box-sizing: border-box;
+      padding: 30px;
+  
+      &__titulo {
+        color: $smoky-black;
+        font-size: $xx-large;
+        font-weight: $bold;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        width: 80%;
+
+        @include mobile-view {
+          font-size: $xx-large;
+        }
+  
+        @include tablet-view {
+          font-size: $xxx-large;
+        }
+  
+        @include laptop-view {
+          margin: 0 250px 0 0;
+        }
+      }
+  
+      &__texto {
+        color: $granite-gray;
+        font-family: $raleway;
+        font-size: $small;
+        font-weight: $regular;
+        margin: 20px 0;
+        line-height: 1.5;
+  
+        @include tablet-view {
+          font-size: $medium;
+          margin: 20px 150px 20px 0;
+        }
+      }
+  
+      @include tablet-view {
+        padding: 20px 60px 50px;
+      }
+  
+      @include laptop-view {
+        padding: 80px;
+      }
+    }
+  
+    .newsletter {
+      display: grid;
+      grid-template-columns: auto 50px;
+      grid-template-rows: auto;
+      
+      &__form {
+        background-color: $smoky-black;
+        box-sizing: border-box;
+        padding: 20px 30px;
+  
+        @include tablet-view {
+          padding: 30px 60px 50px;
+        }
+  
+        @include laptop-view {
+          padding: 30px 80px 50px;
+        }
+      }
+  
+      &__titulo {
+        color: $white;
+        font-size: $x-large;
+        font-weight: $bold;
+        margin: 0 0 10px 0;
+  
+        @include tablet-view {
+          font-size: $xx-large;
+          margin: 0 0 20px 0;
+        }
+      }
+  
+      &__email {
+        overflow: hidden;
+        width: 100%;
+      }
+  
+      &__label {
+        color: $light-gray;
+        display: block;
+        font-size: $small;
+        font-weight: $regular;
+        margin: 0 0 5px 0;
+  
+        @include tablet-view {
+          font-size: $medium;
+          margin: 0 0 10px 0;
+        }
+      }
+  
+      &__suscribir {
+        align-items: center;
+        background-color: $white;
+        display: flex;
+        font-family: $old-stanbard;
+        font-size: $x-large;
+        font-weight: $bold;
+        justify-content: center;
+        text-orientation: mixed;
+        writing-mode: vertical-rl;
+  
+        @include tablet-view {
+          font-size: $x-large;
+        }
+      }
+  
+      @include tablet-view {
+        grid-template-columns: auto 80px;
+      }
+    }
+  
+    @include tablet-view {
+      margin: 80px 0 0;
+    }
+  
+    @include laptop-view {
+      grid-template-columns: 1fr 1.5fr;
+      grid-template-rows: auto;
+    }
+  }
+  

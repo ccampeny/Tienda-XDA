@@ -1,0 +1,16 @@
+.input {
+    border: 1px solid $quick-silver;
+    color: $smoky-black;
+    font-family: $raleway;
+    font-size: $small;
+    font-weight: $regular;
+    padding: 5px;
+    width: 100%;
+  
+    @include tablet-view {
+      font-size: $medium;
+      padding: 7px;
+    }
+  }
+  
+  
